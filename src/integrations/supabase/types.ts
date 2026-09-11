@@ -14,7 +14,78 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      members: {
+        Row: {
+          aadhar_number: string | null
+          address: string
+          blood_group: string
+          consent: boolean
+          created_at: string
+          date_of_birth: string
+          designation: string
+          district: string
+          emergency_contact: string | null
+          full_name: string
+          id: string
+          membership_id: string
+          payment_amount: number
+          payment_status: string
+          phone: string
+          photo_url: string | null
+          source: string
+          taluk: string
+          updated_at: string
+          valid_from: string
+          valid_until: string
+        }
+        Insert: {
+          aadhar_number?: string | null
+          address: string
+          blood_group: string
+          consent?: boolean
+          created_at?: string
+          date_of_birth: string
+          designation?: string
+          district: string
+          emergency_contact?: string | null
+          full_name: string
+          id?: string
+          membership_id: string
+          payment_amount?: number
+          payment_status?: string
+          phone: string
+          photo_url?: string | null
+          source?: string
+          taluk: string
+          updated_at?: string
+          valid_from?: string
+          valid_until?: string
+        }
+        Update: {
+          aadhar_number?: string | null
+          address?: string
+          blood_group?: string
+          consent?: boolean
+          created_at?: string
+          date_of_birth?: string
+          designation?: string
+          district?: string
+          emergency_contact?: string | null
+          full_name?: string
+          id?: string
+          membership_id?: string
+          payment_amount?: number
+          payment_status?: string
+          phone?: string
+          photo_url?: string | null
+          source?: string
+          taluk?: string
+          updated_at?: string
+          valid_from?: string
+          valid_until?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
