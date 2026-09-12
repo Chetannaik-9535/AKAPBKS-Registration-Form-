@@ -77,11 +77,11 @@ export function IdCard({ member, autoDownload = false }: Props) {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="flex w-full flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-center">
+      <div className="flex w-full max-w-full flex-col items-center gap-6 overflow-x-auto pb-2 lg:flex-row lg:items-start lg:justify-center">
         {/* FRONT */}
         <div
           ref={frontRef}
-          className="relative h-[404px] w-[640px] shrink-0 origin-top scale-[0.52] overflow-hidden rounded-lg border-2 border-gold bg-card text-[10px] text-foreground sm:scale-[0.72] lg:scale-100"
+          className="relative h-[404px] w-[640px] shrink-0 overflow-hidden rounded-lg border-2 border-gold bg-card text-[10px] text-foreground"
           style={{ marginBottom: 0 }}
         >
           {watermark}
@@ -141,7 +141,7 @@ export function IdCard({ member, autoDownload = false }: Props) {
         {/* BACK */}
         <div
           ref={backRef}
-          className="relative h-[404px] w-[640px] shrink-0 origin-top scale-[0.52] overflow-hidden rounded-lg border-2 border-gold bg-card px-4 py-3 text-[9px] text-foreground sm:scale-[0.72] lg:scale-100"
+          className="relative h-[404px] w-[640px] shrink-0 overflow-hidden rounded-lg border-2 border-gold bg-card px-4 py-3 text-[9px] text-foreground"
         >
           {watermark}
           <div className="relative">
