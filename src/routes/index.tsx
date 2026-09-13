@@ -1,24 +1,70 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { BearersCarousel } from "@/components/BearersCarousel";
+import { OrgHeader } from "@/components/OrgHeader";
+import { RegistrationForm } from "@/components/RegistrationForm";
+import { SiteFooter } from "@/components/SiteFooter";
+import { ORG } from "@/lib/org";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "AKAPBKS Member Registration & Digital ID Card" },
+      {
+        name: "description",
+        content:
+          "Register with the All Karnataka Unorganized Priests and Cooks Workers' Association and receive your bilingual digital membership ID card instantly.",
+      },
+      { property: "og:title", content: "AKAPBKS Member Registration & Digital ID Card" },
+      {
+        property: "og:description",
+        content:
+          "Purohit registration form and instant digital ID card for AKAPBKS members across Karnataka.",
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="mandala-bg min-h-screen">
+      <OrgHeader />
+
+      <main className="mx-auto max-w-6xl px-4 py-8">
+        <section className="panel mx-auto max-w-3xl p-5 text-center">
+          <h2 className="text-xl font-semibold text-maroon sm:text-2xl">
+            ಸಂಘದ ಪರಿಚಯ / About the Union
+          </h2>
+          <div className="gold-rule mx-auto my-3 w-28" />
+          <p className="text-sm leading-relaxed">
+            ಅಖಿಲ ಕರ್ನಾಟಕದ ಅಸಂಘಟಿತ ಪುರೋಹಿತರು ಮತ್ತು ಬಾಣಸಿಗ ಕಾರ್ಮಿಕರ ಹಿತರಕ್ಷಣೆ, ಗೌರವ ಮತ್ತು ಕಲ್ಯಾಣಕ್ಕಾಗಿ ಈ ಸಂಘವು
+            ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದೆ. ಸದಸ್ಯರಾಗಿ ನೋಂದಾಯಿಸಿಕೊಂಡು ಡಿಜಿಟಲ್ ಗುರುತಿನ ಚೀಟಿಯನ್ನು ಪಡೆಯಿರಿ.
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            The union works for the dignity, welfare and recognition of unorganized priests and cooks
+            across Karnataka. Register as a member below and receive your official digital identity
+            card.
+          </p>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="text-center text-xl font-semibold text-maroon sm:text-2xl">
+            ರಾಜ್ಯ ಕಾರ್ಯದರ್ಶಿಗಳು / State Office-Bearers
+          </h2>
+          <BearersCarousel />
+        </section>
+
+        <section className="mt-4">
+          <RegistrationForm />
+        </section>
+
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          {ORG.officeKn.join(" · ")} · {ORG.email}
+        </p>
+      </main>
+
+      <SiteFooter />
     </div>
   );
 }
