@@ -71,7 +71,7 @@ export function IdCard({ member, autoDownload = false }: Props) {
       src={LOGO_URL}
       alt=""
       aria-hidden
-      className="pointer-events-none absolute left-1/2 top-1/2 w-[68%] -translate-x-1/2 -translate-y-1/2 opacity-10"
+      className="pointer-events-none absolute left-1/2 top-1/2 w-[62%] -translate-x-1/2 -translate-y-1/2 opacity-[0.07]"
     />
   );
 
@@ -146,7 +146,7 @@ export function IdCard({ member, autoDownload = false }: Props) {
           {watermark}
           <div className="relative">
             <p className="text-[11px] font-bold text-maroon">ವಿಶೇಷ ಸೂಚನೆ :</p>
-            <ol className="mt-1 space-y-1 leading-snug">
+            <ol className="mt-1 space-y-1 break-words leading-snug [overflow-wrap:anywhere]">
               {CARD_BACK_NOTES.map((note, i) => (
                 <li key={note}>
                   {i + 1}. {note}
@@ -155,7 +155,7 @@ export function IdCard({ member, autoDownload = false }: Props) {
             </ol>
 
             <div className="mt-2 flex gap-3">
-              <div className="flex-1 leading-snug">
+              <div className="flex-1 break-words leading-snug">
                 {ORG.officeKn.map((line) => (
                   <p key={line} className="font-semibold">
                     {line}
