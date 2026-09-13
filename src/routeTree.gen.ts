@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
 import { Route as MemberMembershipIdRouteImport } from './routes/member.$membershipId'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MemberMembershipIdRoute = MemberMembershipIdRouteImport.update({
   id: '/member/$membershipId',
   path: '/member/$membershipId',
@@ -31,30 +37,35 @@ const MemberMembershipIdRoute = MemberMembershipIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/member/$membershipId': typeof MemberMembershipIdRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/member/$membershipId': typeof MemberMembershipIdRoute
   '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/member/$membershipId': typeof MemberMembershipIdRoute
   '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/member/$membershipId' | '/admin/'
+  fullPaths: '/' | '/admin/dashboard' | '/member/$membershipId' | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/member/$membershipId' | '/admin'
-  id: '__root__' | '/' | '/member/$membershipId' | '/admin/'
+  to: '/' | '/admin/dashboard' | '/member/$membershipId' | '/admin'
+  id:
+    '__root__' | '/' | '/admin/dashboard' | '/member/$membershipId' | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
   MemberMembershipIdRoute: typeof MemberMembershipIdRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
@@ -75,6 +86,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/member/$membershipId': {
       id: '/member/$membershipId'
       path: '/member/$membershipId'
@@ -87,6 +105,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
   MemberMembershipIdRoute: MemberMembershipIdRoute,
   AdminIndexRoute: AdminIndexRoute,
 }
