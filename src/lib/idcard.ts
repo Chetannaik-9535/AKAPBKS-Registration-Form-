@@ -35,17 +35,22 @@ export async function downloadCardPdf(
   pdf.save(`${fileName}.pdf`);
 }
 
-export async function downloadCardImages(front: HTMLElement, back: HTMLElement, fileName: string) {
-  for (const [side, node] of [
-    ["front", front],
-    ["back", back],
-  ] as const) {
-    const canvas = await snapshot(node);
-    const link = document.createElement("a");
-    link.href = canvas.toDataURL("image/png");
-    link.download = `${fileName}-${side}.png`;
-    link.click();
-  }
+export async function downloadCardImage(front: HTMLElement, back: HTMLElement, fileName: string) {
+  const [frontCanvas, backCanvas] = await Promise.all([snapshot(front), snapshot(back)]);
+  const gap = 48;
+  const canvas = document.createElement("canvas");
+  canvas.width = frontCanvas.width + backCanvas.width + gap;
+  canvas.height = Math.max(frontCanvas.height, backCanvas.height);
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Could not prepare ID card image");
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(frontCanvas, 0, 0);
+  ctx.drawImage(backCanvas, frontCanvas.width + gap, 0);
+  const link = document.createElement("a");
+  link.href = canvas.toDataURL("image/png");
+  link.download = `${fileName}.png`;
+  link.click();
 }
 
 /** Downscale and compress a chosen photo to a small data URL. */

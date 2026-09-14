@@ -1,13 +1,13 @@
-import logoAsset from "@/assets/logo.jpeg.asset.json";
+import logoAsset from "@/assets/akapbks-logo.jpeg.asset.json";
 import bearer1 from "@/assets/bearer1.jpeg.asset.json";
 import bearer2 from "@/assets/bearer2.jpeg.asset.json";
 import bearer3 from "@/assets/bearer3.jpeg.asset.json";
 import bearer4 from "@/assets/bearer4.jpeg.asset.json";
 import bearer5 from "@/assets/bearer5.jpeg.asset.json";
 import bearer6 from "@/assets/bearer6.jpeg.asset.json";
-import sign1 from "@/assets/sign1.jpeg.asset.json";
-import sign2 from "@/assets/sign2.jpeg.asset.json";
-import sign3 from "@/assets/sign3.jpeg.asset.json";
+import sign1 from "@/assets/sign-president.png.asset.json";
+import sign2 from "@/assets/sign-secretary.png.asset.json";
+import sign3 from "@/assets/sign-treasurer.png.asset.json";
 
 export const LOGO_URL = logoAsset.url;
 
@@ -16,7 +16,11 @@ export const ORG = {
   nameEn: "All Karnataka Unorganized Priests and Cooks Workers' Association (Regd.)",
   regNo: "ಕಾಅಂಬೆ -1/ಡಿಆರ್ ಟಿ /ಟಿಯುಎ/ಸಿಆರ್-04/2026-27",
   approval: "Approved By Karnataka Govt",
-  officeKn: ["ಪ್ರಧಾನ ಕಚೇರಿ", "ಬೆಂಗಳೂರು-560058", "ಕರ್ನಾಟಕ ರಾಜ್ಯ"],
+  officeKn: [
+    "ಪ್ರಧಾನ ಕಚೇರಿ",
+    "#11, ಕಾರಂಜಿ ಡಾಬಾ ಹಿಂಭಾಗ, ಪೈಪ್ ಲೈನ್ ರಸ್ತೆ, ಮಹದೇಶ್ವರ ನಗರ, ಹೇರೋಹಳ್ಳಿ ಕ್ರಾಸ್, ಮಾಗಡಿ ಮುಖ್ಯ ರಸ್ತೆ, ವಿಶ್ವ ನೀಡಂ ಅಂಚೆ, ಬೆಂಗಳೂರು 560091.",
+    "ಕರ್ನಾಟಕ ರಾಜ್ಯ",
+  ],
   email: "akapbks.office@gmail.com",
   phones: ["9880421306", "9845730892", "9880644409"],
 };
