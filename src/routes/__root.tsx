@@ -15,6 +15,14 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 
 
 function NotFoundComponent() {
+  if (typeof window !== "undefined") {
+    const p = window.location.pathname.toLowerCase();
+    if (p === "/registration" || p === "/register" || p === "/registration/") {
+      window.location.replace("/Registration");
+      return null;
+    }
+  }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
@@ -25,10 +33,10 @@ function NotFoundComponent() {
         </p>
         <div className="mt-6">
           <Link
-            to="/"
+            to="/Registration"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Go to Registration / ನೋಂದಣಿ ಪುಟ
           </Link>
         </div>
       </div>

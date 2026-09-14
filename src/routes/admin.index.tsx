@@ -91,8 +91,8 @@ function AdminLogin() {
             <Button type="submit" disabled={busy}>
               Login / ಲಾಗಿನ್
             </Button>
-            <Link to="/" className="text-center text-xs text-muted-foreground underline">
-              ← Back to Home
+            <Link to="/Registration" className="text-center text-xs text-muted-foreground underline">
+              ← Back to Registration / ನೋಂದಣಿ ಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ
             </Link>
           </div>
         </form>

@@ -213,8 +213,8 @@ function AdminDashboard() {
         <div className="border-b border-border bg-secondary/85 backdrop-blur-xs">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
           <div className="flex items-center gap-4">
-            <Link to="/" className="text-sm font-medium underline">
-              Home
+            <Link to="/Registration" className="text-sm font-medium underline">
+              Registration / ನೋಂದಣಿ
             </Link>
             <span className="text-sm font-semibold text-maroon">
               ಆಡ್ಮಿನ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ / Admin Dashboard

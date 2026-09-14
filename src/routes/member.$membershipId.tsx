@@ -118,8 +118,8 @@ function MemberVerification() {
             </div>
           ) : null}
           <div className="mt-6 text-center">
-            <Link to="/" className="text-xs underline text-muted-foreground">
-              ← Home
+            <Link to="/Registration" className="text-xs underline text-muted-foreground">
+              ← Back to Registration / ನೋಂದಣಿ ಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ
             </Link>
           </div>
         </div>
