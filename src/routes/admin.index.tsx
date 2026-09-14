@@ -24,6 +24,8 @@ export const Route = createFileRoute("/admin/")({
         property: "og:description",
         content: "Secure super admin login for AKAPBKS member registration management.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),

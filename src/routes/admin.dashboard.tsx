@@ -42,6 +42,8 @@ export const Route = createFileRoute("/admin/dashboard")({
         property: "og:description",
         content: "Manage AKAPBKS member registrations, download ID cards and export member data.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),

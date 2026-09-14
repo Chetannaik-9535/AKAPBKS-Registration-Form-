@@ -21,6 +21,8 @@ export const Route = createFileRoute("/")({
         content:
           "Purohit registration form and instant digital ID card for AKAPBKS members across Karnataka.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
