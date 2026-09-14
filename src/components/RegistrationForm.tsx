@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { IdCard } from "@/components/IdCard";
-import { BLOOD_GROUPS, FREE_UNTIL, KARNATAKA_DISTRICTS, MEMBERSHIP_FEE } from "@/lib/org";
+import { BLOOD_GROUPS, KARNATAKA_DISTRICTS } from "@/lib/org";
 import { fileToDataUrl } from "@/lib/idcard";
 import { registerMember, type MemberRecord } from "@/lib/members.functions";
 
@@ -52,7 +52,6 @@ export function RegistrationForm({ mode = "public", adminToken, onRegistered }: 
   const [member, setMember] = useState<MemberRecord | null>(null);
 
   const isAdmin = mode === "admin";
-  const freeWindowOpen = new Date() <= new Date(`${FREE_UNTIL}T23:59:59`);
 
   function set<K extends keyof typeof empty>(key: K, value: string) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -134,12 +133,6 @@ export function RegistrationForm({ mode = "public", adminToken, onRegistered }: 
       <p className="mt-1 text-center text-xs text-muted-foreground">
         Please fill all details correctly. Your digital ID card will be created based on this
         information.
-      </p>
-
-      <p className="mt-4 rounded-lg border border-gold bg-secondary p-3 text-center text-xs font-medium text-maroon">
-        {freeWindowOpen
-          ? `ನೋಂದಣಿ ${new Date(FREE_UNTIL).toLocaleDateString("en-GB")} ರವರೆಗೆ ಉಚಿತ · Registration is free for 30 days (until ${new Date(FREE_UNTIL).toLocaleDateString("en-GB")}). After that the membership fee is ₹${MEMBERSHIP_FEE}.`
-          : `ಸದಸ್ಯತ್ವ ಶುಲ್ಕ ₹${MEMBERSHIP_FEE} · Membership fee of ₹${MEMBERSHIP_FEE} is payable to the union office to activate your card.`}
       </p>
 
       <h3 className="mt-6 text-lg font-semibold text-maroon">ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ / Personal Information</h3>

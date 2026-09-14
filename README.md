@@ -43,7 +43,7 @@ District/ಜಿಲ್ಲೆSelect
 
 ಹುದ್ದೆ / Designation : Member(Fix not changable or not rewrite)
 Collects: full name, date of birth, phone,  blood group, district, taluk, address, designation, Aadhar, temple name & address, emergency contact, photo upload, . Consent checkbox required.
-On submit — Generates a digital ID card (front: top middle organization logo , organization name, Highlight color with text "Approved By Karnataka Govt", Rg No: (ಕಾಅಂಬೆ -1/ಡಿಆರ್ ಟಿ /ಟಿಯುಎ/ಸಿಆರ್-04/2026-27 )  Don't  change anything add as it is photo, name, designation, DOB, age, blood group,Phone No,  membership ID(generate ranndom six number starting letter AKAPBKS), ; back: 
+On submit — Generates a digital ID card (front: top middle organization logo , organization name, Highlight color with text "Approved By Karnataka Govt", Rg No: (ಕಾಅಬೆಂ -1/ಡಿಆರ್ ಟಿ/ಟಿಯುಎ/ಸಿಆರ್-04/2026-27 )  Don't  change anything add as it is photo, name, designation, DOB, age, blood group,Phone No,  membership ID(generate ranndom six number starting letter AKAPBKS), ; back: 
 ವಿಶೇಷ ಸೂಚನೆ :
 1. ಈ ಸಂಸ್ಥೆಗೆ ನೀಡಿರುವಂತಹ ದೇಣಿಗೆ ಹಣವನ್ನು ಸಂಘದ ಉನ್ನತ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಸಂಘದ  ದೈಯುದೇಶಕ್ಕಾಗಿ ಬಳಸಬೇಕೆಂದು ಈ ಮೂಲಕ ದೃಢೀಕರಿಸುತ್ತೇವೆ .
 2. ಈ ಸಂಸ್ಥೆಯಲ್ಲಿ ಸಾಮಾನ್ಯ ಸದಸ್ಯತ್ವ ಹೊಂದಿರುವ ನಾನು ಸ್ವಯಂಸೇವಕನಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತೇನೆ ಎಂದು ದೃಢೀಕರಿಸಿರುತ್ತೇನೆ .
