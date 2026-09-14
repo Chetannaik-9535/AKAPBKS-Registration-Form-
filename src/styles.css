@@ -104,37 +104,13 @@
   }
 }
 
-/* Rangoli / mandala background texture built from layered radial gradients */
+/* Clean background for portal pages */
 @utility mandala-bg {
   position: relative;
-  background-color: var(--background);
-  background-image:
-    radial-gradient(circle at 12% 18%, oklch(0.7 0.18 55 / 0.14) 0 2px, transparent 3px),
-    radial-gradient(circle at 88% 22%, oklch(0.79 0.15 84 / 0.18) 0 2px, transparent 3px),
-    radial-gradient(circle at 50% 50%, oklch(0.7 0.18 55 / 0.07) 0 38%, transparent 39%),
-    radial-gradient(circle at 50% 50%, transparent 0 27%, oklch(0.79 0.15 84 / 0.1) 28% 29%, transparent 30%),
-    radial-gradient(circle at 50% 50%, transparent 0 16%, oklch(0.7 0.18 55 / 0.09) 17% 18%, transparent 19%),
-    conic-gradient(
-      from 0deg at 50% 50%,
-      oklch(0.79 0.15 84 / 0.07) 0deg 8deg,
-      transparent 8deg 30deg,
-      oklch(0.7 0.18 55 / 0.06) 30deg 38deg,
-      transparent 38deg 60deg
-    );
-  background-size:
-    72px 72px,
-    72px 72px,
-    520px 520px,
-    520px 520px,
-    520px 520px,
-    520px 520px;
-  background-position:
-    0 0,
-    0 0,
-    center top,
-    center top,
-    center top,
-    center top;
+  background-image: url('/assets/mandala_om_bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 @utility gold-rule {

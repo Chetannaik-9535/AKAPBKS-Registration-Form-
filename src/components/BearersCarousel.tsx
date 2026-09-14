@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const MODES = ["coverflow", "fade-zoom", "slide"] as const;
 
-/** Persistent auto-advancing carousel of state office-bearers (no labels). */
+/** Auto-advancing carousel of state office-bearers with names & designations. */
 export function BearersCarousel() {
   const [index, setIndex] = useState(0);
   const [mode, setMode] = useState(0);
@@ -22,10 +22,14 @@ export function BearersCarousel() {
   }, []);
 
   const style = MODES[mode];
+  const activeBearer = OFFICE_BEARERS[index] ?? OFFICE_BEARERS[0]!;
 
   return (
-    <div className="relative mx-auto w-full max-w-4xl overflow-hidden px-2 py-6">
-      <div className="relative flex h-56 items-center justify-center sm:h-72" style={{ perspective: "1200px" }}>
+    <div className="relative mx-auto w-full max-w-4xl overflow-hidden px-2 py-4">
+      <div
+        className="relative flex h-72 items-center justify-center sm:h-92"
+        style={{ perspective: "1200px" }}
+      >
         {OFFICE_BEARERS.map((bearer, i) => {
           const offset = i - index;
           const wrapped =
@@ -52,26 +56,62 @@ export function BearersCarousel() {
             <figure
               key={bearer.photo}
               className={cn(
-                "absolute h-52 w-40 overflow-hidden rounded-xl border-4 border-gold bg-card shadow-[var(--shadow-temple)] transition-all duration-700 ease-out sm:h-68 sm:w-52",
-                active ? "z-20" : "z-10",
+                "absolute flex flex-col overflow-hidden rounded-2xl border-[3px] border-gold bg-card shadow-[var(--shadow-temple)] transition-all duration-700 ease-out h-64 w-44 sm:h-84 sm:w-56",
+                active ? "z-20 ring-2 ring-primary/40 shadow-2xl" : "z-10",
               )}
               style={{ transform, opacity }}
             >
-              <img src={bearer.photo} alt="" className="size-full object-cover object-top" />
+              <div className="relative flex-1 w-full overflow-hidden bg-stone-100">
+                <img
+                  src={bearer.photo}
+                  alt={bearer.nameKn}
+                  className="size-full object-cover object-top"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/70 to-transparent" />
+              </div>
+              <figcaption className="bg-gradient-to-b from-[#6b0d14] to-[#4a0b0b] px-2 py-1.5 text-center text-white border-t-2 border-[#d4af37]">
+                <p className="text-xs sm:text-sm font-extrabold text-amber-200 leading-tight">
+                  {bearer.nameKn}
+                </p>
+                <p className="text-[10px] sm:text-[11px] font-semibold text-white leading-tight mt-0.5">
+                  {bearer.roleKn}
+                </p>
+                <p className="text-[8.5px] sm:text-[9.5px] text-amber-300/85 leading-tight">
+                  {bearer.roleEn}
+                </p>
+              </figcaption>
             </figure>
           );
         })}
       </div>
-      <div className="mt-4 flex justify-center gap-2">
+
+      {/* Pagination Dots */}
+      <div className="mt-3 flex justify-center gap-2">
         {OFFICE_BEARERS.map((bearer, i) => (
-          <span
+          <button
             key={bearer.photo}
+            type="button"
+            onClick={() => setIndex(i)}
+            aria-label={`Show ${bearer.nameKn}`}
             className={cn(
-              "size-2 rounded-full transition-colors",
-              i === index ? "bg-primary" : "bg-border",
+              "size-2.5 rounded-full transition-all duration-300 cursor-pointer",
+              i === index ? "w-6 bg-primary" : "bg-border hover:bg-muted-foreground",
             )}
           />
         ))}
+      </div>
+
+      {/* Prominent Active Person Name & Designation Below Carousel */}
+      <div className="mt-2 flex justify-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-gold bg-secondary/80 px-4 py-1 shadow-sm">
+          <span className="text-xs sm:text-sm font-bold text-maroon">
+            {activeBearer.nameKn}
+          </span>
+          <span className="text-xs text-muted-foreground">•</span>
+          <span className="text-[11px] sm:text-xs font-medium text-foreground">
+            {activeBearer.roleKn} / {activeBearer.roleEn}
+          </span>
+        </div>
       </div>
     </div>
   );
