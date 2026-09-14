@@ -16,3 +16,5 @@
 - [ ] Admin "Selected People Registration" form (designation writable)
 - [ ] Footer bilingual copyright
 - [ ] Organization scanner column left empty (pending image from president)
+- [ ] Rebuild the generated ID card to match the supplied ornate reference: exact office address, requested front fields only, no validity, scanner, cardholder signature, or QR
+- [ ] Isolate the three supplied blue-ink signatures on transparent backgrounds for the card footer
