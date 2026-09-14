@@ -21,6 +21,8 @@ export const Route = createFileRoute("/member/$membershipId")({
         property: "og:description",
         content: "Verify an AKAPBKS digital membership card by scanning its QR code.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),
