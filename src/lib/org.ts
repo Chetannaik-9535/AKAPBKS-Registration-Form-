@@ -57,6 +57,18 @@ export const OFFICE_BEARERS = [
     roleKn: "ರಾಜ್ಯ ಉಪಾಧ್ಯಕ್ಷರು",
     roleEn: "State Vice President",
   },
+  {
+    photo: "/assets/bearer7.jpeg",
+    nameKn: "ಹೇಮಂತ್ ಕುಮಾರ್",
+    roleKn: "ನಿರ್ದೇಶಕರು",
+    roleEn: "Director",
+  },
+  {
+    photo: "/assets/bearer8.jpeg",
+    nameKn: "ಸತ್ಯ ಮೂರ್ತಿ ಕೆ ನ್",
+    roleKn: "ಹಿರಿಯ ಉಪಾಧ್ಯಕ್ಷರು",
+    roleEn: "Senior Vice President",
+  },
 ];
 
 export const CARD_SIGNATORIES = [
