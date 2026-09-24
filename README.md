@@ -16,9 +16,9 @@ Public-facing pages:
 Home — Union intro, office-bearers carousel, and the registration form.
 Registration Form — 
 Admin Dashboard / ಆಡ್ಮಿನ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್
-ಪುರೋಹಿತರ ನೋಂದಣಿ ನಮೂನೆ
+ಪುರೋಹಿತರ ಮತ್ತು ಬಾಣಸಿಗರ ನೋಂದಣಿ ನಮೂನೆ
 
-Purohit Registration Form
+Priests and Cooks Registration Form
 
 ದಯವಿಟ್ಟು ಎಲ್ಲಾ ವಿವರಗಳನ್ನು ಸರಿಯಾಗಿ ಭರ್ತಿ ಮಾಡಿ. ಈ ಮಾಹಿತಿಯ ಆಧಾರದ ಮೇಲೆ ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಗುರುತಿನ ಚೀಟಿಯನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ.
 

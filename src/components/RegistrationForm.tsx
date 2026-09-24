@@ -123,8 +123,8 @@ export function RegistrationForm({ mode = "public", adminToken, onRegistered }: 
 
   return (
     <form onSubmit={handleSubmit} className="panel mx-auto w-full max-w-3xl p-4 sm:p-6">
-      <h2 className="text-center text-2xl font-semibold text-maroon">ಪುರೋಹಿತರ ನೋಂದಣಿ ನಮೂನೆ</h2>
-      <p className="text-center text-base font-medium">Purohit Registration Form</p>
+      <h2 className="text-center text-2xl font-semibold text-maroon">ಪುರೋಹಿತರ ಮತ್ತು ಬಾಣಸಿಗರ ನೋಂದಣಿ ನಮೂನೆ</h2>
+      <p className="text-center text-base font-medium">Priests and Cooks Registration Form</p>
       <div className="gold-rule mx-auto my-4 w-40" />
       <p className="text-center text-sm text-muted-foreground">
         ದಯವಿಟ್ಟು ಎಲ್ಲಾ ವಿವರಗಳನ್ನು ಸರಿಯಾಗಿ ಭರ್ತಿ ಮಾಡಿ. ಈ ಮಾಹಿತಿಯ ಆಧಾರದ ಮೇಲೆ ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಗುರುತಿನ ಚೀಟಿಯನ್ನು

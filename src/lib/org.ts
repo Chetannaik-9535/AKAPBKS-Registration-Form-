@@ -69,6 +69,24 @@ export const OFFICE_BEARERS = [
     roleKn: "ಹಿರಿಯ ಉಪಾಧ್ಯಕ್ಷರು",
     roleEn: "Senior Vice President",
   },
+  {
+    photo: "/assets/bearer9.jpeg",
+    nameKn: "ಶ್ರೀ ಪೂರ್ಣಿಮಾ ಶ್ರೀಕಾಂತ್",
+    roleKn: "ಖ್ಯಾತ ವಕೀಲರು, ಕಾನೂನು ಘಟಕ ರಾಜ್ಯ ಮುಖ್ಯಸ್ಥರು",
+    roleEn: "Renowned Advocate, State Legal Cell Head",
+  },
+  {
+    photo: "/assets/bearer10.jpeg",
+    nameKn: "ಶ್ರೀ ಎಚ್.ಆರ್. ಲಕ್ಷ್ಮಿ ಶ್ರೀ",
+    roleKn: "ರಾಜ್ಯ ಸಮಿತಿ ಮಹಿಳಾ ಅಧ್ಯಕ್ಷರು",
+    roleEn: "State Women's Committee President",
+  },
+  {
+    photo: "/assets/bearer11.jpeg",
+    nameKn: "ಎನ್. ಶಶಿಧರ್",
+    roleKn: "ರಾಜ್ಯ ಯುವ ಸಮಿತಿ ಅಧ್ಯಕ್ಷರು",
+    roleEn: "State Youth Committee President",
+  },
 ];
 
 export const CARD_SIGNATORIES = [

@@ -19,7 +19,7 @@ export const Route = createFileRoute("/Registration")({
       {
         property: "og:description",
         content:
-          "Purohit registration form and instant digital ID card for AKAPBKS members across Karnataka.",
+          "Priests and cooks registration form and instant digital ID card for AKAPBKS members across Karnataka.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
